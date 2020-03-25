@@ -1,0 +1,6 @@
+23:26:52 **** Build of configuration release for project tictoc3 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+23:26:55 Build Finished (took 3s.266ms)
+

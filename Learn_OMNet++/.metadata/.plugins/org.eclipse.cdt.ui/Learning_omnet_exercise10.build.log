@@ -1,0 +1,7 @@
+23:00:28 **** Build of configuration release for project Learning_omnet_exercise10 ****
+make MODE=release all 
+e10.cc
+Creating executable: out/clang-release//Learning_omnet_exercise10.exe
+
+23:00:35 Build Finished (took 7s.167ms)
+

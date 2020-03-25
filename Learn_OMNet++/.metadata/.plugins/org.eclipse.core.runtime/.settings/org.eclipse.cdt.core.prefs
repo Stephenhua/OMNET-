@@ -1,0 +1,5 @@
+build.all.configs.enabled=false
+build.proj.ref.configs.enabled=false
+doctool/workspace.default=org.eclipse.cdt.ui.doxygen
+eclipse.preferences.version=1
+org.eclipse.cdt.core.showSourceRootsAtTopLevelOfProject=true

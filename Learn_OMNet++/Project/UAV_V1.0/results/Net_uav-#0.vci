@@ -1,0 +1,215 @@
+file 19836 1554820024                                           
+version 2
+run Net_uav-0-20190409-22:26:21-39460
+attr configname Net_uav
+attr datetime 20190409-22:26:21
+attr experiment Net_uav
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Networks.Net_uav
+attr processid 39460
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.app.packetLength "intuniform(128 byte, 1024 byte)"
+param **.destAddresses "\"0 1 2 3 4 5 6 7  8 9 \""
+param **.sendIaTime "uniform(500ms, 1500ms)"
+param **.drone*.mobility.typename "\"GaussMarkovMobility\""
+param **.drone*.mobility.alpha 0.9
+param **.drone*.mobility.speed 10mps
+param **.drone*.mobility.angle 0deg
+param **.drone*.mobility.variance 40
+param **.drone*.mobility.margin 2000m
+param **.aew*.mobility.typename "\"MassMobility\""
+param **.aew*.mobility.initFromDisplayString false
+param **.aew*.mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.aew*.mobility.angleDelta "normal(0deg, 30deg)"
+param **.aew*.mobility.speed "truncnormal(20mps, 8mps)"
+param **.aew*.mobility.updateInterval 100ms
+param **.attack*.mobility.typename "\"AnsimMobility\""
+param **.attack*.mobility.ansimTrace "xmldoc(\"ansimtrace.xml\")"
+param **.attack*.mobility.nodeId -1
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 2000m
+param **.constraintAreaMaxY 2000m
+param **.constraintAreaMaxZ 0m
+
+vector 0 Net_uav.aew[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 Net_uav.aew[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 Net_uav.aew[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 3 Net_uav.attack[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 4 Net_uav.attack[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 5 Net_uav.attack[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 6 Net_uav.attack[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 7 Net_uav.attack[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 8 Net_uav.attack[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 9 Net_uav.attack[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 10 Net_uav.attack[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 11 Net_uav.attack[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 12 Net_uav.drone[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 13 Net_uav.drone[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 14 Net_uav.drone[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 15 Net_uav.drone[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 16 Net_uav.drone[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 17 Net_uav.drone[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 18 Net_uav.drone[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 19 Net_uav.drone[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 20 Net_uav.drone[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 21 Net_uav.drone[3] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 22 Net_uav.drone[3] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 23 Net_uav.drone[3] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 24 Net_uav.drone[4] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 25 Net_uav.drone[4] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 26 Net_uav.drone[4] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 27 Net_uav.drone[5] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 28 Net_uav.drone[5] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 29 Net_uav.drone[5] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 30 Net_uav.drone[0].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+vector 31 Net_uav.attack[1].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+vector 32 Net_uav.drone[4].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+vector 33 Net_uav.attack[2].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+0	7023 537 0 121 0 1.07615733589 18 1097.6270046085 1099.537452446 19778.121467628 21731899.55956
+1	7560 539 0 121 0 1.07615733589 18 1173.3634005429 1185.6892327778 21207.980401965 24987929.555448
+2	8099 288 0 121 0 1.07615733589 18 0 0 0 0
+3	8387 306 0 121 0 1.07615733589 18 50 50 900 45000
+4	8693 306 0 121 0 1.07615733589 18 50 50 900 45000
+5	8999 288 0 121 0 1.07615733589 18 0 0 0 0
+6	9287 324 0 121 0 1.07615733589 18 100 100 1800 180000
+7	9611 336 0 121 0 1.07615733589 18 100 100.54398097064 1800.5439809706 180109.09210942
+8	9947 288 0 121 0 1.07615733589 18 0 0 0 0
+9	10235 324 0 121 0 1.07615733589 18 300 300 5400 1620000
+10	10559 342 0 121 0 1.07615733589 18 400 400 7200 2880000
+11	10901 306 0 121 0 1.07615733589 18 0 0 0 0
+12	11207 558 0 121 0 1.07615733589 18 894.25075706095 905.25494486171 16215.575284914 14608257.301097
+13	11765 556 0 121 0 1.07615733589 18 897.95920908314 912.03017156453 16296.508486563 14754642.07041
+14	12321 306 0 121 0 1.07615733589 18 0 0 0 0
+15	12627 558 0 121 0 1.07615733589 18 1530.3377229643 1535.3382022567 27609.546694767 42349314.353535
+16	13185 556 0 121 0 1.07615733589 18 1620.3127198112 1627.6052524955 29237.443309033 47490510.523466
+17	13741 306 0 121 0 1.07615733589 18 0 0 0 0
+18	14047 557 0 121 0 1.07615733589 18 1160.8289668797 1165.5242279137 20926.522263178 24328878.082841
+19	14604 555 0 121 0 1.07615733589 18 624.70943042884 630.74278233389 11322.862085345 7122685.4292095
+20	15159 306 0 121 0 1.07615733589 18 0 0 0 0
+21	15465 556 0 121 0 1.07615733589 18 1313.7846787981 1321.0305397185 23690.908785392 31181167.184042
+22	16021 555 0 121 0 1.07615733589 18 995.13001909956 1008.413504942 18024.626373784 18049410.089583
+23	16576 306 0 121 0 1.07615733589 18 0 0 0 0
+24	16882 557 0 121 0 1.07615733589 18 847.71008789539 859.40848228826 15405.192723127 13184578.054443
+25	17439 551 0 121 0 1.07615733589 18 1235.8358923562 1242.0688302301 22307.650471516 27646257.268098
+26	17990 306 0 121 0 1.07615733589 18 0 0 0 0
+27	18296 555 0 121 0 1.07615733589 18 1432.076315437 1438.5704651476 25857.407881 37144822.911555
+28	18851 554 0 121 0 1.07615733589 18 1317.998091311 1321.6480870111 23763.982693572 31373739.547531
+29	19405 306 0 121 0 1.07615733589 18 0 0 0 0
+30	19711 24 73 73 0.748753139749 0.748753139749 1 0 0 0 0
+31	19735 37 94 94 0.896134438231 0.896134438231 1 3.6160001e-005 3.6160001e-005 3.6160001e-005 1.30754567232e-009
+32	19772 37 97 97 0.897687064013 0.897687064013 1 0.109210631572 0.109210631572 0.109210631572 0.011926962048355
+33	19809 25 110 110 0.933288063854 0.933288063854 1 0 0 0 0
+

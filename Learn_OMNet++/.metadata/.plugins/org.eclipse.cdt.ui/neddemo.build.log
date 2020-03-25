@@ -1,0 +1,6 @@
+23:19:36 **** Build of configuration release for project neddemo ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+23:19:43 Build Finished (took 6s.990ms)
+

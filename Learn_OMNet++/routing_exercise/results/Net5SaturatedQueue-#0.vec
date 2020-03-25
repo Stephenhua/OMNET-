@@ -1,0 +1,24 @@
+version 2
+run Net5SaturatedQueue-0-20190224-12:28:46-27144
+attr configname Net5SaturatedQueue
+attr datetime 20190224-12:28:46
+attr experiment Net5SaturatedQueue
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network networks.Net5
+attr processid 27144
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.frameCapacity 10
+param **.destAddresses "\"1 4\""
+param **.sendIaTime "uniform(100ms, 500ms)"
+param **.app.packetLength "intuniform(50 bytes, 4096 bytes)"
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+
+

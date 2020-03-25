@@ -1,0 +1,20 @@
+version 2
+run General-0-20181101-21:33:17-33300
+attr configname General
+attr datetime 20181101-21:33:17
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc15
+attr processid 33300
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0 Tictoc15.tic[5] HopCount ETV
+0	18	1.7	17
+

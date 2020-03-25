@@ -1,0 +1,16 @@
+/*
+ * tic16.cc
+ *
+ *  Created on: 2018Äê11ÔÂ7ÈÕ
+ *      Author: Jason
+ */
+# include <stdio.h>
+# include <string.h>
+# include <omnetpp.h>
+# include "tictoc16_m.h"
+
+using namespace omnetpp;
+
+
+
+

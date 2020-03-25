@@ -1,0 +1,11 @@
+10:46:25 **** Incremental Build of configuration release for project Learning_omnet_exercise3 ****
+make MODE=release all 
+e4.cc
+Creating executable: out/clang-release//Learning_omnet_exercise3.exe
+C:\omnet\omnetpp-5.2\tools\win64\mingw64\bin\ld：无法打开输出文件 out/clang-release//Learning_omnet_exercise3.exe：Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:95: out/clang-release//Learning_omnet_exercise3.exe] Error 1
+
+10:46:31 Build Finished (took 5s.472ms)
+

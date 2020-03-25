@@ -1,0 +1,16 @@
+11:29:56 **** Incremental Build of configuration release for project tictoc14 ****
+make MODE=release all 
+txc14.cc
+txc14.cc:90:40: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+    sprintf(buf," rcvd: %1d sent: %1d",numReceived,numSent);
+                        ~~~            ^~~~~~~~~~~
+                        %1ld
+txc14.cc:90:52: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+    sprintf(buf," rcvd: %1d sent: %1d",numReceived,numSent);
+                                  ~~~              ^~~~~~~
+                                  %1ld
+2 warnings generated.
+Creating executable: out/clang-release//tictoc14.exe
+
+11:30:01 Build Finished (took 4s.429ms)
+

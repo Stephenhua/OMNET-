@@ -1,0 +1,6 @@
+16:40:04 **** Incremental Build of configuration release for project Learning_omnet_ex14 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+16:40:06 Build Finished (took 2s.379ms)
+

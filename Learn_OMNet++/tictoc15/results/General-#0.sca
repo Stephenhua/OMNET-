@@ -1,0 +1,127 @@
+version 2
+run General-0-20181101-21:33:17-33300
+attr configname General
+attr datetime 20181101-21:33:17
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc15
+attr processid 33300
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Tictoc15.tic[0] #sent 0
+scalar Tictoc15.tic[0] #received 0
+statistic Tictoc15.tic[0] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc15.tic[1] #sent 0
+scalar Tictoc15.tic[1] #received 0
+statistic Tictoc15.tic[1] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc15.tic[2] #sent 0
+scalar Tictoc15.tic[2] #received 0
+statistic Tictoc15.tic[2] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc15.tic[3] #sent 0
+scalar Tictoc15.tic[3] #received 0
+statistic Tictoc15.tic[3] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc15.tic[4] #sent 0
+scalar Tictoc15.tic[4] #received 0
+statistic Tictoc15.tic[4] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc15.tic[5] #sent 1
+scalar Tictoc15.tic[5] #received 1
+statistic Tictoc15.tic[5] "hop count"
+field count 1
+field mean 17
+field stddev nan
+field min 17
+field max 17
+field sum 17
+field sqrsum 289
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+bin	2	0
+bin	3	0
+bin	4	0
+bin	5	0
+bin	6	0
+bin	7	0
+bin	8	0
+bin	9	0
+bin	10	0
+bin	11	0
+bin	12	0
+bin	13	0
+bin	14	0
+bin	15	0
+bin	16	0
+bin	17	1
+bin	18	0
+bin	19	0
+bin	20	0
+bin	21	0
+bin	22	0
+bin	23	0
+bin	24	0
+bin	25	0
+bin	26	0
+

@@ -1,0 +1,7 @@
+16:29:42 **** Incremental Build of configuration release for project Learining_omnet_exercise6 ****
+make MODE=release all 
+e6.cc
+Creating executable: out/clang-release//Learining_omnet_exercise6.exe
+
+16:29:49 Build Finished (took 6s.104ms)
+

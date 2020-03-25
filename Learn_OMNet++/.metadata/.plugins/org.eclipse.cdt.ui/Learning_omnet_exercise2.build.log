@@ -1,0 +1,7 @@
+22:12:45 **** Incremental Build of configuration release for project Learning_omnet_exercise2 ****
+make MODE=release all 
+Learning_exercise.cc
+Creating executable: out/clang-release//Learning_omnet_exercise2.exe
+
+22:13:04 Build Finished (took 18s.875ms)
+

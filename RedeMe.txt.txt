@@ -1,0 +1,4 @@
+1)在文件Learn_OMNET++中，主要是日常学习oMNET++的简单代码
+2)Omnet++_Source_Code中，里面有不同版本的源码，为了方便下载，存到百度网盘里面；
+链接：https://pan.baidu.com/s/1CKptTlU9hemJpQLT2T8Bag 
+提取码：hjkc 

@@ -1,0 +1,27 @@
+file 692 1551097079                                             
+version 2
+run RandomMesh-0-20190225-20:17:48-15236
+attr configname RandomMesh
+attr datetime 20190225-20:17:48
+attr experiment RandomMesh
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network networks.RandomMesh
+attr processid 15236
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.destAddresses "\"0 18 52\""
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+
+vector 0 RandomMesh.node[52].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+0	657 33 15 15 0.009799054664 0.009799054664 1 0.000398304 0.000398304 0.000398304 1.58646076416e-007
+

@@ -1,0 +1,8 @@
+15:06:20 **** Incremental Build of configuration debug for project Learning_omnet_ex13 ****
+make MODE=debug all 
+ex13.cc
+ex13_m.cc
+Creating executable: out/clang-debug//Learning_omnet_ex13_dbg.exe
+
+15:06:33 Build Finished (took 13s.104ms)
+

@@ -1,0 +1,117 @@
+file 185496 1552221781                                          
+version 2
+run Net5_moving-0-20190310-20:42:48-888
+attr configname Net5_moving
+attr datetime 20190310-20:42:48
+attr experiment Net5_moving
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Networks.Net5_moving
+attr processid 888
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.destAddresses "\"1 3\""
+param **.sendIaTime "uniform(500ms, 1500ms)"
+param **.rte*.mobility.typename "\"AnsimMobility\""
+param **.rte*.mobility.ansimTrace "xmldoc(\"ansimtrace.xml\")"
+param **.rte*.mobility.nodeId -1
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 2000m
+param **.constraintAreaMaxY 2000m
+param **.constraintAreaMaxZ 0m
+
+vector 0 Net5_moving.rte[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 Net5_moving.rte[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 Net5_moving.rte[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 3 Net5_moving.rte[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 4 Net5_moving.rte[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 5 Net5_moving.rte[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 6 Net5_moving.rte[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 7 Net5_moving.rte[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 8 Net5_moving.rte[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 9 Net5_moving.rte[3] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 10 Net5_moving.rte[3] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 11 Net5_moving.rte[3] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 12 Net5_moving.rte[4] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 13 Net5_moving.rte[4] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 14 Net5_moving.rte[4] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 15 Net5_moving.rte[1].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+vector 16 Net5_moving.rte[3].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+0	3657 11832 0 301 0 4.10432818679 500 50 50 25000 1250000
+1	15489 11832 0 301 0 4.10432818679 500 50 50 25000 1250000
+2	27321 11332 0 301 0 4.10432818679 500 0 0 0 0
+3	38653 12332 0 301 0 4.10432818679 500 100 100 50000 5000000
+4	50985 12332 0 301 0 4.10432818679 500 100 100 50000 5000000
+5	63317 11332 0 301 0 4.10432818679 500 0 0 0 0
+6	74649 12332 0 301 0 4.10432818679 500 300 300 150000 45000000
+7	86981 12332 0 301 0 4.10432818679 500 400 400 200000 80000000
+8	99313 11332 0 301 0 4.10432818679 500 0 0 0 0
+9	110645 12333 0 301 0 4.10432818679 500 400 400 200000 80000000
+10	122978 12833 0 301 0 4.10432818679 500 500 500 250000 125000000
+11	135811 11833 0 301 0 4.10432818679 500 0 0 0 0
+12	147644 12833 0 301 0 4.10432818679 500 300 300 150000 45000000
+13	160477 12833 0 301 0 4.10432818679 500 180 180 90000 16200000
+14	173310 11833 0 301 0 4.10432818679 500 0 0 0 0
+15	185143 277 52 292 0.837396161631 4.065498364532 8 0 2.748432100097 8.903901574105 15.186873931613
+16	185420 74 72 265 1.148171876557 3.601285096724 3 0 0 0 0
+

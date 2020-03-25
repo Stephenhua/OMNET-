@@ -1,0 +1,6 @@
+22:53:22 **** Incremental Build of configuration release for project Txc2 ****
+make MODE=release all 
+make: Nothing to be done for 'all'.
+
+22:53:27 Build Finished (took 5s.168ms)
+

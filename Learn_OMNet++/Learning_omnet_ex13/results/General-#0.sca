@@ -1,0 +1,102 @@
+version 2
+run General-0-20190218-15:07:19-26656
+attr configname General
+attr datetime 20190218-15:07:19
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc_ex13
+attr processid 26656
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Tictoc_ex13.tic[0] #sent 0
+scalar Tictoc_ex13.tic[0] #received 0
+statistic Tictoc_ex13.tic[0] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc_ex13.tic[1] #sent 0
+scalar Tictoc_ex13.tic[1] #received 0
+statistic Tictoc_ex13.tic[1] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc_ex13.tic[2] #sent 0
+scalar Tictoc_ex13.tic[2] #received 0
+statistic Tictoc_ex13.tic[2] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc_ex13.tic[3] #sent 0
+scalar Tictoc_ex13.tic[3] #received 0
+statistic Tictoc_ex13.tic[3] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc_ex13.tic[4] #sent 0
+scalar Tictoc_ex13.tic[4] #received 0
+statistic Tictoc_ex13.tic[4] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Tictoc_ex13.tic[5] #sent 0
+scalar Tictoc_ex13.tic[5] #received 0
+statistic Tictoc_ex13.tic[5] "hop count"
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr type int
+bin	-inf	0
+bin	0	0
+bin	1	0
+

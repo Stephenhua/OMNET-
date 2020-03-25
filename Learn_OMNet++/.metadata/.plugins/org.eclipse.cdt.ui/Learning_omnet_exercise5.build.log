@@ -1,0 +1,19 @@
+11:39:29 **** Incremental Build of configuration release for project Learning_omnet_exercise5 ****
+make MODE=release all 
+ex5.cc
+ex5.cc:54:11: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    if(msg=event)
+       ~~~^~~~~~
+ex5.cc:54:11: note: place parentheses around the assignment to silence this warning
+    if(msg=event)
+          ^
+       (        )
+ex5.cc:54:11: note: use '==' to turn this assignment into an equality comparison
+    if(msg=event)
+          ^
+          ==
+1 warning generated.
+Creating executable: out/clang-release//Learning_omnet_exercise5.exe
+
+11:39:35 Build Finished (took 6s.517ms)
+

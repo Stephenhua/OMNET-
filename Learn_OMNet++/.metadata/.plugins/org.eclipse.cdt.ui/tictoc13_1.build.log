@@ -1,0 +1,8 @@
+21:39:43 **** Incremental Build of configuration release for project tictoc13_1 ****
+make MODE=release all 
+tic13_1.cc
+untitled_m.cc
+Creating executable: out/clang-release//tictoc13_1.exe
+
+21:39:50 Build Finished (took 7s.234ms)
+

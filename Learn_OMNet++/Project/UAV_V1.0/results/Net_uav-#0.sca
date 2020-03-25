@@ -1,0 +1,6506 @@
+version 2
+run Net_uav-0-20190409-22:26:21-39460
+attr configname Net_uav
+attr datetime 20190409-22:26:21
+attr experiment Net_uav
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Networks.Net_uav
+attr processid 39460
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.app.packetLength "intuniform(128 byte, 1024 byte)"
+param **.destAddresses "\"0 1 2 3 4 5 6 7  8 9 \""
+param **.sendIaTime "uniform(500ms, 1500ms)"
+param **.drone*.mobility.typename "\"GaussMarkovMobility\""
+param **.drone*.mobility.alpha 0.9
+param **.drone*.mobility.speed 10mps
+param **.drone*.mobility.angle 0deg
+param **.drone*.mobility.variance 40
+param **.drone*.mobility.margin 2000m
+param **.aew*.mobility.typename "\"MassMobility\""
+param **.aew*.mobility.initFromDisplayString false
+param **.aew*.mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.aew*.mobility.angleDelta "normal(0deg, 30deg)"
+param **.aew*.mobility.speed "truncnormal(20mps, 8mps)"
+param **.aew*.mobility.updateInterval 100ms
+param **.attack*.mobility.typename "\"AnsimMobility\""
+param **.attack*.mobility.ansimTrace "xmldoc(\"ansimtrace.xml\")"
+param **.attack*.mobility.nodeId -1
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 2000m
+param **.constraintAreaMaxY 2000m
+param **.constraintAreaMaxZ 0m
+
+scalar Net_uav.aew[0].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.aew[0].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.aew[0].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.aew[0].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.aew[0].routing outputIf:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.aew[0].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.aew[0].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.aew[0].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.aew[0].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.aew[0].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.aew[0].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.aew[0].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.attack[0].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.attack[0].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.attack[0].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.attack[0].routing outputIf:histogram
+field count 1
+field mean 8
+field stddev nan
+field min 8
+field max 8
+field sum 8
+field sqrsum 64
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	7	0
+bin	8	1
+bin	9	0
+scalar Net_uav.attack[0].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[8] txBytes:count 1
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[8] txBytes:sum 987
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[8] txBytes:histogram
+field count 1
+field mean 987
+field stddev nan
+field min 987
+field max 987
+field sum 987
+field sqrsum 974169
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	986	0
+bin	987	1
+bin	988	0
+scalar Net_uav.attack[0].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[0].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[0].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[0].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[0].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[0].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[0].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[0].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].app hopCount:mean 1
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.attack[1].app hopCount:max 1
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.attack[1].app endToEndDelay:mean 3.6160001e-005
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.attack[1].app endToEndDelay:max 3.6160001e-005
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.attack[1].routing outputIf:histogram
+field count 1
+field mean -1
+field stddev nan
+field min -1
+field max -1
+field sum -1
+field sqrsum 1
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	-2	0
+bin	-1	1
+bin	0	0
+scalar Net_uav.attack[1].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[2] rxBytes:count 1
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[2] rxBytes:sum 452
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[2] rxBytes:histogram
+field count 1
+field mean 452
+field stddev nan
+field min 452
+field max 452
+field sum 452
+field sqrsum 204304
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	451	0
+bin	452	1
+bin	453	0
+scalar Net_uav.attack[1].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[1].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[1].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[1].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[1].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[1].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[1].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[1].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].app hopCount:mean 0
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.attack[2].app hopCount:max 0
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.attack[2].app endToEndDelay:mean 0
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.attack[2].app endToEndDelay:max 0
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.attack[2].routing outputIf:histogram
+field count 1
+field mean -1
+field stddev nan
+field min -1
+field max -1
+field sum -1
+field sqrsum 1
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	-2	0
+bin	-1	1
+bin	0	0
+scalar Net_uav.attack[2].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.attack[2].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.attack[2].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.attack[2].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.attack[2].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.attack[2].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.attack[2].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.attack[2].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].app hopCount:mean 0
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[0].app hopCount:max 0
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[0].app endToEndDelay:mean 0
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[0].app endToEndDelay:max 0
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[0].routing outputIf:histogram
+field count 1
+field mean -1
+field stddev nan
+field min -1
+field max -1
+field sum -1
+field sqrsum 1
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	-2	0
+bin	-1	1
+bin	0	0
+scalar Net_uav.drone[0].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[0].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[0].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[0].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[0].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[0].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[0].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[0].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[1].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[1].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[1].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[1].routing outputIf:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[1].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[1].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[1].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[1].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[1].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[1].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[1].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[2].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[2].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[2].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[2].routing outputIf:histogram
+field count 1
+field mean 1
+field stddev nan
+field min 1
+field max 1
+field sum 1
+field sqrsum 1
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	1
+bin	2	0
+scalar Net_uav.drone[2].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[1] txBytes:count 1
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[1] txBytes:sum 234
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[1] txBytes:histogram
+field count 1
+field mean 234
+field stddev nan
+field min 234
+field max 234
+field sum 234
+field sqrsum 54756
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	233	0
+bin	234	1
+bin	235	0
+scalar Net_uav.drone[2].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[2].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[2].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[2].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[2].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[2].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[2].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[2].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[3].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[3].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[3].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[3].routing outputIf:histogram
+field count 1
+field mean 2
+field stddev nan
+field min 2
+field max 2
+field sum 2
+field sqrsum 4
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	1	0
+bin	2	1
+bin	3	0
+scalar Net_uav.drone[3].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[2] txBytes:count 1
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[2] txBytes:sum 452
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[2] txBytes:histogram
+field count 1
+field mean 452
+field stddev nan
+field min 452
+field max 452
+field sum 452
+field sqrsum 204304
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	451	0
+bin	452	1
+bin	453	0
+scalar Net_uav.drone[3].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[3].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[3].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[3].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[3].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[3].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[3].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[3].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].app hopCount:mean 1
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[4].app hopCount:max 1
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[4].app endToEndDelay:mean 0.109210631572
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[4].app endToEndDelay:max 0.109210631572
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[4].routing outputIf:histogram
+field count 1
+field mean -1
+field stddev nan
+field min -1
+field max -1
+field sum -1
+field sqrsum 1
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	-2	0
+bin	-1	1
+bin	0	0
+scalar Net_uav.drone[4].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[8] rxBytes:count 1
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[8] rxBytes:sum 987
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[8] rxBytes:histogram
+field count 1
+field mean 987
+field stddev nan
+field min 987
+field max 987
+field sum 987
+field sqrsum 974169
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	986	0
+bin	987	1
+bin	988	0
+scalar Net_uav.drone[4].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[4].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[4].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[4].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[4].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[4].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[4].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[4].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].app hopCount:mean nan
+attr interpolationmode none
+attr title "hop count of arrived packets, mean"
+scalar Net_uav.drone[5].app hopCount:max nan
+attr interpolationmode none
+attr title "hop count of arrived packets, max"
+scalar Net_uav.drone[5].app endToEndDelay:mean nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, mean"
+attr unit s
+scalar Net_uav.drone[5].app endToEndDelay:max nan
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, max"
+attr unit s
+statistic Net_uav.drone[5].routing outputIf:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "output interface for each routed packet, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].routing drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].routing drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[0] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[0] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[0] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[0] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[0] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[0] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[0] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[0] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[0] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[0] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[0] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[1] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[1] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[1] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[1] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[1] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[1] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[1] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[1] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[1] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[1] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[1] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[2] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[2] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[2] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[2] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[2] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[2] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[2] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[2] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[2] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[2] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[2] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[3] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[3] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[3] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[3] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[3] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[3] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[3] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[3] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[3] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[3] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[3] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[4] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[4] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[4] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[4] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[4] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[4] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[4] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[4] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[4] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[4] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[4] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[5] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[5] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[5] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[5] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[5] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[5] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[5] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[5] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[5] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[5] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[5] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[6] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[6] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[6] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[6] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[6] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[6] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[6] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[6] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[6] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[6] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[6] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[7] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[7] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[7] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[7] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[7] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[7] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[7] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[7] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[7] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[7] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[7] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[8] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[8] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[8] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[8] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[8] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[8] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[8] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[8] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[8] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[8] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[8] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+scalar Net_uav.drone[5].queue[9] rxBytes:count 0
+attr interpolationmode none
+attr title "received packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[9] rxBytes:sum 0
+attr interpolationmode none
+attr title "received packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[9] rxBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "received packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[9] txBytes:count 0
+attr interpolationmode none
+attr title "transmitting packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[9] txBytes:sum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, sum"
+attr unit bytes
+statistic Net_uav.drone[5].queue[9] txBytes:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "transmitting packet byte length, histogram"
+attr unit bytes
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net_uav.drone[5].queue[9] busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Net_uav.drone[5].queue[9] qlen:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net_uav.drone[5].queue[9] qlen:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net_uav.drone[5].queue[9] drop:count 0
+attr interpolationmode none
+attr title "dropped packet byte length, count"
+attr unit bytes
+scalar Net_uav.drone[5].queue[9] drop:sum 0
+attr interpolationmode none
+attr title "dropped packet byte length, sum"
+attr unit bytes
+

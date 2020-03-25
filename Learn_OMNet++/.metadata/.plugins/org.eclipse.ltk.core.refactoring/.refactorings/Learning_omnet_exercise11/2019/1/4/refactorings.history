@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Learning_omnet_exercise11/ex11.h&apos; to &apos;ex11_m.h&apos;" description="Rename resource &apos;ex11.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ex11.h" name="ex11_m.h" stamp="1548312260933" updateReferences="true"/>
+</session>

@@ -1,0 +1,6 @@
+23:01:52 **** Clean-only build of configuration release for project Learning_omnet_exercise11 ****
+make MODE=release clean 
+make: *** No rule to make target 'clean'.  Stop.
+
+23:01:52 Build Finished (took 360ms)
+

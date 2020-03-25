@@ -1,0 +1,16 @@
+10:11:59 **** Build of configuration gcc-debug for project AVENS ****
+make MODE=debug all 
+Aircraft.cc
+Aircraft.cc:8:10: error: 'Aircraft.h' file not found with <angled> include; use "quotes" instead
+#include <Aircraft.h>
+         ^~~~~~~~~~~~
+         "Aircraft.h"
+In file included from Aircraft.cc:8:
+./Aircraft.h:11:10: fatal error: 'csimplemodule.h' file not found
+#include <csimplemodule.h>
+         ^~~~~~~~~~~~~~~~~
+2 errors generated.
+make: *** [Makefile:110: out/clang-debug//Aircraft.o] Error 1
+
+10:12:03 Build Finished (took 3s.763ms)
+

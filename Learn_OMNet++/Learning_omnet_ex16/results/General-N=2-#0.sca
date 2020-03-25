@@ -1,0 +1,86 @@
+version 2
+run General-0-20190219-15:06:52-15664
+attr configname General
+attr datetime 20190219-15:06:52
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars $N=2
+attr iterationvarsf N=2-
+attr measurement $N=2
+attr network TicToc_ex16
+attr processid 15664
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+itervar N 2
+param *.numCentralNodes 2
+
+statistic TicToc_ex16.tic[0] hopCount:stats
+field count 4568
+field mean 15.895359019264
+field stddev 15.754896650626
+field min 1
+field max 127
+field sum 72610
+field sqrsum 2287768
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic TicToc_ex16.tic[1] hopCount:stats
+field count 4579
+field mean 15.670015287181
+field stddev 15.865949435352
+field min 1
+field max 131
+field sum 71753
+field sqrsum 2276783
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic TicToc_ex16.tic[2] hopCount:stats
+field count 4608
+field mean 4.9878472222222
+field stddev 6.1535471644853
+field min 1
+field max 69
+field sum 22984
+field sqrsum 289090
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic TicToc_ex16.tic[3] hopCount:stats
+field count 4580
+field mean 3.8659388646288
+field stddev 4.5734329349421
+field min 1
+field max 40
+field sum 17706
+field sqrsum 164226
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic TicToc_ex16.tic[4] hopCount:stats
+field count 4587
+field mean 8.5144974929148
+field stddev 8.0649049646137
+field min 1
+field max 78
+field sum 39056
+field sqrsum 630828
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic TicToc_ex16.tic[5] hopCount:stats
+field count 4642
+field mean 14.243429556226
+field stddev 13.211006333484
+field min 1
+field max 115
+field sum 66118
+field sqrsum 1751744
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+

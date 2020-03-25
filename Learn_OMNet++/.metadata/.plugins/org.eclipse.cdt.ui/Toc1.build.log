@@ -1,0 +1,6 @@
+21:46:02 **** Build of configuration release for project Toc1 ****
+make MODE=release all 
+make: *** No rule to make target 'all'.  Stop.
+
+21:46:03 Build Finished (took 452ms)
+

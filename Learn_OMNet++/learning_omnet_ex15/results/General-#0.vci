@@ -1,0 +1,24 @@
+file 521 1550559760                                             
+version 2
+run General-0-20190219-15:02:36-24120
+attr configname General
+attr datetime 20190219-15:02:36
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network TicToc_ex15
+attr processid 24120
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0 TicToc_ex15.tic[5] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+0	506 13 18 18 1.7 1.7 1 17 17 17 289
+

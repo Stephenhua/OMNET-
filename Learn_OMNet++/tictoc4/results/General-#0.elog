@@ -1,0 +1,48 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1282 rid General-0-20181021-23:08:06-10992 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t Tictoc4 n Tictoc4 cm 1
+MS id 1 d bgb=168,178
+MC id 2 c Txc4 t Txc4 pid 1 n tic
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d "i=block/routing, cyan"
+MC id 3 c Txc4 t Txc4 pid 1 n toc
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MS id 3 d p=121,116;i=block/routing,gold
+CC sm 2 sg 3 dm 3 dg 0
+CS sm 2 sg 3 d ""
+CC sm 3 sg 3 dm 2 dg 0
+CS sm 3 sg 3 d ""
+MB sm 1 tm 2 m initialize(0)
+- INFO (Txc4)Tictoc4.tic: Sending initial message
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 0
+SH sm 2 sg 3 pd 0.1
+ES t 0.1
+CL id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 0 cid 1
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+
+E # 1 t 0.1 m 3 ce 0 msg 0
+- INFO (Txc4)Tictoc4.toc: toc's counter is 4's ,sending back message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 1
+SH sm 3 sg 3 pd 0.1
+ES t 0.2
+CL id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 1 cid 2
+
+E # 2 t 0.2 m 2 ce 1 msg 0
+- INFO (Txc4)Tictoc4.tic: tic's counter is 1's ,sending back message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 2
+SH sm 2 sg 3 pd 0.1
+ES t 0.3
+CL id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 2 cid 3
+
+E # 3 t 0.3 m 3 ce 2 msg 0
+- INFO (Txc4)Tictoc4.toc: toc's counter is 3's ,sending back message
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 3
+SH sm 3 sg 3 pd 0.1
+ES t 0.4
+CL id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n tictocMsg pe 3 cid 4

@@ -1,0 +1,11 @@
+22:44:37 **** Build of configuration release for project tictoc13 ****
+make MODE=release all 
+Creating executable: out/clang-release//tictoc13.exe
+out/clang-release//tic.o:(.text+0x47d)：对‘TicTocMsg13::TicTocMsg13(char const*, short)’未定义的引用
+out/clang-release//tic.o:(.text[_ZN7omnetpp14check_and_castIP11TicTocMsg13NS_8cMessageEEET_PT0_]+0x18)：对‘typeinfo for TicTocMsg13’未定义的引用
+out/clang-release//tic.o:(.rdata[_ZTIP11TicTocMsg13]+0x18)：对‘typeinfo for TicTocMsg13’未定义的引用
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:96: out/clang-release//tictoc13.exe] Error 1
+
+22:44:40 Build Finished (took 3s.135ms)
+

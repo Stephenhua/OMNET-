@@ -1,0 +1,117 @@
+file 110914 1552221746                                          
+version 2
+run MobileNetwork_1-0-20190310-20:42:11-888
+attr configname MobileNetwork_1
+attr datetime 20190310-20:42:11
+attr experiment MobileNetwork_1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Networks.MobileNetwork
+attr processid 888
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.destAddresses "\"1 3\""
+param **.sendIaTime "uniform(500ms, 2500ms)"
+param **.rte*.mobility.typename "\"AnsimMobility\""
+param **.rte*.mobility.ansimTrace "xmldoc(\"ansimtrace.xml\")"
+param **.rte*.mobility.nodeId -1
+param **.appType "\"App\""
+param **.app.packetLength "4096 bytes"
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 2000m
+param **.constraintAreaMaxY 2000m
+param **.constraintAreaMaxZ 0m
+
+vector 0 MobileNetwork.rte[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 MobileNetwork.rte[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 MobileNetwork.rte[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 3 MobileNetwork.rte[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 4 MobileNetwork.rte[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 5 MobileNetwork.rte[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 6 MobileNetwork.rte[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 7 MobileNetwork.rte[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 8 MobileNetwork.rte[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 9 MobileNetwork.rte[3] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 10 MobileNetwork.rte[3] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 11 MobileNetwork.rte[3] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 12 MobileNetwork.rte[4] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 13 MobileNetwork.rte[4] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 14 MobileNetwork.rte[4] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 15 MobileNetwork.rte[1].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+vector 16 MobileNetwork.rte[3].app endToEndDelay:vector ETV
+attr interpolationmode none
+attr title "end-to-end delay of arrived packets, vector"
+attr unit s
+0	3705 6975 0 204 0 3.253509913559 302 50 50 15100 755000
+1	10680 6975 0 204 0 3.253509913559 302 50 50 15100 755000
+2	17655 6673 0 204 0 3.253509913559 302 0 0 0 0
+3	24328 7277 0 204 0 3.253509913559 302 100 100 30200 3020000
+4	31605 7277 0 204 0 3.253509913559 302 100 100 30200 3020000
+5	38882 6673 0 204 0 3.253509913559 302 0 0 0 0
+6	45555 7277 0 204 0 3.253509913559 302 300 300 90600 27180000
+7	52832 7277 0 204 0 3.253509913559 302 400 400 120800 48320000
+8	60109 6673 0 204 0 3.253509913559 302 0 0 0 0
+9	66782 7277 0 204 0 3.253509913559 302 400 400 120800 48320000
+10	74059 7579 0 204 0 3.253509913559 302 500 500 151000 75500000
+11	81638 6975 0 204 0 3.253509913559 302 0 0 0 0
+12	88613 7580 0 204 0 3.253509913559 302 300 300 90600 27180000
+13	96193 7580 0 204 0 3.253509913559 302 180 180 54360 9784800
+14	103773 6976 0 204 0 3.253509913559 302 0 0 0 0
+15	110749 138 69 194 1.174792323261 3.061473530413 4 0 2.521036732172 4.940393834303 9.3052014461431
+16	110887 25 109 109 1.796343753114 1.796343753114 1 0 0 0 0
+
